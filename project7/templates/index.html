@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container">
+    <div class="header">
+        <h1>{{ title }}</h1>
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+    </div>
+    
+    <form id="requirementsForm">
+        <div id="requirementsContainer">
+            <div class="requirement-box">
+                <textarea name="requirement" placeholder="Enter your requirement here..." rows="1"></textarea>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <button type="button" id="addRequirement">+ Add Another Requirement</button>
+            <button type="button" id="runButton">Run</button>
+        </div>
+    </form>
+
+    <div class="output-section">
+        <h3>Output:</h3>
+        <textarea id="outputText" readonly></textarea>
+    </div>
+
+    <div class="output-section">
+        <h3>Reference Links:</h3>
+        <div id="referenceLinks"></div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}
