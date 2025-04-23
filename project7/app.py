@@ -71,4 +71,4 @@ if __name__ == '__main__':
   app.run(debug=True)
   
 # Run in VSCode terminal:
-# ./run.sh
+# python app.py
