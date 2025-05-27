@@ -6,7 +6,7 @@ mkdir project7
 
 cd project7
 
-python -m venv envpath
+python3.10 -m venv envpath
 
 source envpath/bin/activate
 
