@@ -219,9 +219,12 @@ class ResearchPipeline:
         evidence = {b: self.research(b) for b in outline}
         return self.write(query, outline, evidence)
 
-def aaa(request):
+def pipeline(request):
     researcher = ResearchPipeline()
     result = researcher.deep_research(request)
+    print(result)
+    # print(type(result))
+
 
 def main():
     """

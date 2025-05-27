@@ -3,7 +3,7 @@ from flask import Flask, session, render_template, request, jsonify, send_from_d
 from datetime import datetime
 import json
 import uuid
-from research import aaa
+from research import pipeline
 
 app = Flask(__name__)
 app.secret_key = "Ok"
@@ -95,12 +95,11 @@ def process():
         
         # Store inputs for LLM processing
         # TODO: Connect with LLM backend
-        llmInputs = requirements  # Uncomment when connecting to LLM backend
 
-        llmOutputs = aaa(llmInputs)
+        results = pipeline(requirements)
         # Use the predefined output and links
         
-        output = llmOutputs
+        output = results
         references = llmLinks
         
         response = {
