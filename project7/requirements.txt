@@ -1,0 +1,11 @@
+flask
+tiktoken
+python-dotenv
+langchain
+langchain-community
+groq
+langchain-groq
+tavily-python
+pydantic
+
+# pip install -r requirements.txt
