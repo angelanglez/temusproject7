@@ -3,6 +3,7 @@ from flask import Flask, session, render_template, request, jsonify, send_from_d
 from datetime import datetime
 import json
 import uuid
+from research import aaa
 
 app = Flask(__name__)
 app.secret_key = "Ok"
@@ -15,7 +16,7 @@ os.makedirs(SAVED_PAGES_DIR, exist_ok=True)
 
 # Variables for LLM integration
 llmInputs = []
-llmOutputs = """test output."""
+llmOutputs = """hello! this is a dynamically changed output."""
 
 llmLinks = ["https://example.com/link1", "https://example.com/link2"]  # Test links, will be replaced with actual LLM links
 
@@ -94,8 +95,9 @@ def process():
         
         # Store inputs for LLM processing
         # TODO: Connect with LLM backend
-        # llmInputs = requirements  # Uncomment when connecting to LLM backend
-        
+        llmInputs = requirements  # Uncomment when connecting to LLM backend
+
+        llmOutputs = aaa(llmInputs)
         # Use the predefined output and links
         
         output = llmOutputs
