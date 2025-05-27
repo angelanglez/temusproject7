@@ -9,3 +9,8 @@ tavily-python
 pydantic
 
 # pip install -r requirements.txt
+
+# OR
+
+# pip install flask tiktoken python-dotenv langchain langchain-community groq langchain-groq tavily-python pydantic
+# pip freeze > requirements.txt
