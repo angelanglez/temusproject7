@@ -38,4 +38,4 @@ python app.py
 >>
 >>- Tavily: https://tavily.com/
 >>
->>3. The saved_pages directory is where the application will store saved research outputs after a COMPLETED research and note-taking.
+>>3. The saved_pages directory is where the application will store saved research outputs after a COMPLETED research.
