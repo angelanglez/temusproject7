@@ -14,7 +14,7 @@ source envpath/bin/activate
 
 pip install -r requirements.txt
 
-> Create .env file for API keys:
+> Create .env file for API keys (don't forget to fill in your keys):
 
 touch .env
 
@@ -30,7 +30,7 @@ mkdir saved_pages
 python app.py
 
 >Important notes:
->>1. Make sure you have Python 3.7+ installed on your machine
+>>1. Make sure you have Python 3.9+ installed on your machine
 >>
 >>2. You'll need to get your own API keys from:
 >>
