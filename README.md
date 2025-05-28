@@ -2,6 +2,8 @@
 
 > Link: <a href="https://kmoyu.pythonanywhere.com">Research Helper</a>
 
+> <a href="https://github.com/angelanglez/temusproject7/blob/main/project7/envpath/guide.md">Click here</a> to use your own localhost to try it! 👍🏻
+
 ## 📝 Overview
 
 This project provides an AI-powered research pipeline that creates structured, well-cited reports on any topic. The pipeline:
