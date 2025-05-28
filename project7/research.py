@@ -127,7 +127,7 @@ class ResearchPipeline:
         Initialize the research pipeline with necessary components.
         """
         self.config = Config()
-        self.counter = TokenCounter()
+        self.counter = TokenCounter() 
         self.limiter = Budget(self.config.TOKEN_BUDGET)
         self.llm = ChatGroq(
             model=self.config.GROQ_MODEL,
@@ -148,7 +148,7 @@ class ResearchPipeline:
         """
         messages = self.config.PLANNER_PROMPT.format_messages(query=query)
         tokens = (
-            sum(self.counter.count(str(m.content)) for m in messages)
+            sum(self.counter.count(str(m.content)) for m in messages) #tokenizing the input
             + self.config.PLANNER_TOK
         )
         self.limiter.consume(tokens)
